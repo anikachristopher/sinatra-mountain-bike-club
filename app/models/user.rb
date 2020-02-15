@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base #why is it inheriting from this
+    has_secure_password
     has_many :riders
     has_many :events, through: :riders
 
