@@ -5,6 +5,7 @@ class CreateRiders < ActiveRecord::Migration
       t.string :gender
       t.date :birthdate
       t.string :category
+      t.integer :user_id
     end
   end
 end
