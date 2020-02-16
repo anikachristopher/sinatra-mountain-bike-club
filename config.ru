@@ -5,7 +5,8 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 use Rack::MethodOverride #needs to go above the controllers. 
-run ApplicationController
 use UsersController
 use EventsController
-use RidersController
+run ApplicationController
+
+
