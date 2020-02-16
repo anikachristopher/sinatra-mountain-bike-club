@@ -1,6 +1,9 @@
 class Event < ActiveRecord::Base
-belongs_to :rider
-has_one :user, through: :rider
+belongs_to :user
 
-validates :rider_category, :event_date, :location, presence: true
+validates :name, :event_date, :category, :time, :location, presence: true
+
+
+    
+      
 end
