@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base #why is it inheriting from this
-    has_secure_password
     has_many :riders
     has_many :events, through: :riders
+    has_secure_password #learn how secure password and bcrypt enable authentication
 
     validates :email, :password, :username, presence: true #whether these things exist
     validates :email, uniqueness: true #whether this is unique
