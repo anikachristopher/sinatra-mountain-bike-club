@@ -1,0 +1,15 @@
+<% @events.each do |t| %>
+
+    <ol>
+    <li><a href="/events/<%=event.id%>"><%=event.name%></a>
+    <p> Date: <%=event.date%></p>
+    <p> Location: <%=event.location%></p>
+    <p> Time: <%=event.time%></p>
+    <p> Category: <%=event.category%></p>
+    </li>
+    <br>
+    <br>
+    <% end %>
+    </ol>
+    
+    
