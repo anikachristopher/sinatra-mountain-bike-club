@@ -1,4 +1,4 @@
-Mountain  bike ckub app
+Mountain  bike club app
 
 User
 Attributes:
