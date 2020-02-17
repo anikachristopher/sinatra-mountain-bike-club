@@ -11,5 +11,26 @@ class EventsController < ApplicationController
       post '/events' do
         @event = Event.create(:name => params[:name], :event_date => params[:event_date], :location => params[:location], :time => params[:time], :category => params[:category])
         redirect to "/events/#{@event.id}"
+
+      get '/events/:id' do
+        @event = Event.find_by_id(params[:id])
+         erb :'show'
+          end
       end
+
+      get '/events/:id/edit' do  #load edit form
+        @event = Event.find_by_id(params[:id])
+        erb :edit
+      end
+     
+    patch '/events/:id' do #edit action
+      @event = Event.find_by_id(params[:id])
+      @event.name = params[:name]
+      @event.event_date = params[:event_date]
+      @event.location = params[:location]
+      @event.time = params[:time]
+      @event.category = params[:category]
+      @event.save
+      redirect to "/event/#{@event.id}"
+    end
 end
