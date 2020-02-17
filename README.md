@@ -1,19 +1,13 @@
-Mountain  bike club app
+Mountain Bike Club App
 
-User
-Attributes:
-username
-password_digest
+Welcome to the Mountain Bike Club Application! 
 
-Rider
-name
-age
-category
-user_id
+This application allows avid mountain bike riding enthusiasts to join their fellow colleagues of all age groups in participating in different events in a variety of locations.
 
-Events
-location
-date
-time
-prize
+This application was created using Sinatra and ActiveRecord. To use this application, follow these steps:
+
+1. Clone this project using the github link
+2. Run Bundle install
+3. Run shotgun
+4. Use the provided URL in your internet browser.
 
