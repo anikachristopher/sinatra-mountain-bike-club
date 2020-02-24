@@ -6,12 +6,12 @@ class UsersController < ApplicationController
 
   post '/signup' do
     if  params[:email].empty? || params[:password].empty?
-        redirect to "/signup"
+        redirect to '/signup'
     else 
-        @user = User.create(username: params["username"], email: params["email"], password: params["password"])
+        @user = User.create(user_name: params["user_name"], email: params["email"], password: params["password"])
         @user.save
         session[:user_id] = @user.id
-        redirect to "/events"
+        redirect to '/events'
         end 
     end
 
@@ -20,13 +20,13 @@ class UsersController < ApplicationController
     end
 
     post "/login" do
-        user = User.find_by(:username => params[:username])
+        user = User.find_by(:user_name => params[:user_name])
     
         if user && user.authenticate(params[:password])
           session[:user_id] = user.id
-          redirect "/success"
+          redirect '/success'
         else
-          redirect "/failure"
+          redirect '/failure'
         end
       end
 
