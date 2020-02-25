@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
     get '/events' do
         @events = Event.all
-        erb :'index'
+        erb :'events/index'
       end
 
       get '/events/new' do
